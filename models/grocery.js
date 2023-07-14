@@ -3,4 +3,6 @@ module.exports = class Grocery {
         this.id = id;
         this.item = item;
     }
+
+    static fetchAll() { }
 }
