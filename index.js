@@ -15,7 +15,7 @@ const groceries = [
 ];
 
 app.get('/', (req, res) => {
-    res.send('Hello');
+    res.send(groceries);
 });
 
 app.listen(ports, () => console.log(`Server listening on port ${ports}`));
