@@ -4,5 +4,16 @@ module.exports = class Grocery {
         this.item = item;
     }
 
-    static fetchAll() { }
+    static fetchAll() {
+        [
+            {
+                id: 1,
+                name: 'Milk'
+            },
+            {
+                id: 2,
+                name: 'Eggs'
+            }
+        ];
+    }
 }
