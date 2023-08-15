@@ -5,15 +5,15 @@ module.exports = class Grocery {
     }
 
     static fetchAll() {
-        [
+        return [
             {
                 id: 1,
-                name: 'Milk'
+                item: 'Milk'
             },
             {
                 id: 2,
-                name: 'Eggs'
+                item: 'Eggs'
             }
         ];
     }
-}
+};
