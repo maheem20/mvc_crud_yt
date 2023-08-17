@@ -4,4 +4,11 @@ exports.get404 = (req, res, next) => {
     next(error);
 }
 
-exports.get500 = (req, res, next) => { }
+exports.get500 = (req, res, next) => {
+    res.status(error.status || 500);
+    res.json({
+        error: {
+            message: error.message
+        },
+    });
+}
