@@ -7,15 +7,6 @@ module.exports = class Grocery {
     }
 
     static fetchAll() {
-        return [
-            {
-                id: 1,
-                item: 'Milk'
-            },
-            {
-                id: 2,
-                item: 'Eggs'
-            }
-        ];
+        return db.execute('SELECT * FROM groceries');
     }
 };
