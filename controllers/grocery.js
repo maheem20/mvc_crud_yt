@@ -1,5 +1,5 @@
 const Grocery = require('../models/grocery');
 
-exports.getAllGroceries = (req, res, next) => {
-    res.send(Grocery.fetchAll());
+exports.getAllGroceries = async (req, res, next) => {
+
 };
