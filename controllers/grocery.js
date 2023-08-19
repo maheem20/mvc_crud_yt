@@ -16,5 +16,10 @@ exports.postGrocery = async (req, res, next) => {
     try {
         const postResponse = await Grocery.post(req.body.item);
         res.status(201).json(postResponse);
-    } catch (err) { }
+    } catch (err) {
+        if (!err.statusCode) {
+            err.statusCode = 500;
+        }
+        next(err);
+    }
 };
