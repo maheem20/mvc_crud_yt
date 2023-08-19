@@ -9,4 +9,8 @@ module.exports = class Grocery {
     static fetchAll() {
         return db.execute('SELECT * FROM groceries');
     }
+
+    static post(item) {
+        return db.execute('INSERT INTO groceries (item) VALUES (?)', [item]);
+    }
 };
