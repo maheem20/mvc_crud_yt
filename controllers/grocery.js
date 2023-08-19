@@ -15,5 +15,6 @@ exports.getAllGroceries = async (req, res, next) => {
 exports.postGrocery = async (req, res, next) => {
     try {
         const postResponse = await Grocery.post(req.body.item);
+        res.status(201).json(postResponse);
     } catch (err) { }
 };
