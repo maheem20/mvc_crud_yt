@@ -4,4 +4,6 @@ const router = express.Router();
 
 router.get('/', groceryController.getAllGroceries);
 
+router.post('/', groceryController.postGrocery);
+
 module.exports = router;
