@@ -11,3 +11,8 @@ exports.getAllGroceries = async (req, res, next) => {
         next(err);
     }
 };
+
+exports.postGrocery = async (req, res, next) => {
+    try {
+    } catch (err) { }
+};
