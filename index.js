@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const groceryRoutes = require('./routes/grocery')
 const errorController = require('./controllers/error');
 const app = express();
