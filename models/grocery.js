@@ -13,4 +13,8 @@ module.exports = class Grocery {
     static post(item) {
         return db.execute('INSERT INTO groceries (item) VALUES (?)', [item]);
     }
+
+    static update(id, item) {
+        return db.execute('UPDATE groceries', [item, id]);
+    }
 };
