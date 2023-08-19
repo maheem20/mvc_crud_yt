@@ -6,4 +6,6 @@ router.get('/', groceryController.getAllGroceries);
 
 router.post('/', groceryController.postGrocery);
 
+router.put('/', groceryController.putGrocery);
+
 module.exports = router;
