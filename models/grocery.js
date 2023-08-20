@@ -15,6 +15,6 @@ module.exports = class Grocery {
     }
 
     static update(id, item) {
-        return db.execute('UPDATE groceries', [item, id]);
+        return db.execute('UPDATE groceries SET item = ? WHERE id = ?', [item, id]);
     }
 };
