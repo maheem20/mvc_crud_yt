@@ -8,4 +8,6 @@ router.post('/', groceryController.postGrocery);
 
 router.put('/', groceryController.putGrocery);
 
+router.delete('/', groceryController.deleteGrocery);
+
 module.exports = router;
