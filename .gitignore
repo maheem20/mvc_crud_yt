@@ -1,2 +1,4 @@
 node_modules/
 .DS_Store
+./Frontend/node_modules/
+./Frontend/.DS_Store
