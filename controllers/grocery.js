@@ -27,6 +27,7 @@ exports.postGrocery = async (req, res, next) => {
 exports.putGrocery = async (req, res, next) => {
     try {
         const putResponse = await Grocery.update(req.body.id, req.body.item);
+        res.status(201).json(putResponse);
     }
     catch (err) {
     }
