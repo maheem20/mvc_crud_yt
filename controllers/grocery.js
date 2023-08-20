@@ -42,5 +42,10 @@ exports.deleteGrocery = async (req, res, next) => {
         const deleteResponse = await Grocery.delete(req.params.id);
         res.status(201).json(deleteResponse);
     }
-    catch (err) { }
+    catch (err) {
+        if (!err.statusCode) {
+            err.statusCode = 500;
+        }
+        next(err);
+    }
 };
