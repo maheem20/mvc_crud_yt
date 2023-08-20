@@ -30,5 +30,8 @@ exports.putGrocery = async (req, res, next) => {
         res.status(201).json(putResponse);
     }
     catch (err) {
+        if (!err.statusCode) {
+            err.statusCode = 500;
+        }
     }
 };
