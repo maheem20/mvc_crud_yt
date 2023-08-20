@@ -9,10 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { GroceryListComponent } from './components/grocery-list/grocery-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GroceryListComponent
   ],
   imports: [
     BrowserModule,
