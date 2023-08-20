@@ -27,7 +27,7 @@ exports.postGrocery = async (req, res, next) => {
 exports.putGrocery = async (req, res, next) => {
     try {
         const putResponse = await Grocery.update(req.body.id, req.body.item);
-        res.status(201).json(putResponse);
+        res.status(200).json(putResponse);
     }
     catch (err) {
         if (!err.statusCode) {
@@ -40,7 +40,7 @@ exports.putGrocery = async (req, res, next) => {
 exports.deleteGrocery = async (req, res, next) => {
     try {
         const deleteResponse = await Grocery.delete(req.params.id);
-        res.status(201).json(deleteResponse);
+        res.status(200).json(deleteResponse);
     }
     catch (err) {
         if (!err.statusCode) {
