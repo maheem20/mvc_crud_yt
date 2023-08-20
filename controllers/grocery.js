@@ -36,3 +36,8 @@ exports.putGrocery = async (req, res, next) => {
         next(err);
     }
 };
+
+exports.deleteGrocery = async (req, res, next) => {
+    try { }
+    catch (err) { }
+};
