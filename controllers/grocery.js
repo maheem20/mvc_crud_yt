@@ -38,6 +38,8 @@ exports.putGrocery = async (req, res, next) => {
 };
 
 exports.deleteGrocery = async (req, res, next) => {
-    try { }
+    try {
+        const deleteResponse = await Grocery.delete(req.params.id);
+    }
     catch (err) { }
 };
