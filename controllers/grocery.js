@@ -40,6 +40,7 @@ exports.putGrocery = async (req, res, next) => {
 exports.deleteGrocery = async (req, res, next) => {
     try {
         const deleteResponse = await Grocery.delete(req.params.id);
+        res.status(201).json(deleteResponse);
     }
     catch (err) { }
 };
