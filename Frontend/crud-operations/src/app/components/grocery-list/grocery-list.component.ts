@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grocery-list.component.scss']
 })
 export class GroceryListComponent {
+  groceries = [
+    { id: 1, name: 'Bread' },
+    { id: 2, name: 'Milk' },
+  ];
 
   constructor() { }
 
