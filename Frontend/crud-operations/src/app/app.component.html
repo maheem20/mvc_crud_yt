@@ -18,5 +18,10 @@
         <input matInput placeholder="Ex. Rice" />
     </mat-form-field>
 
-    <mat-list></mat-list>
+    <mat-list>
+        <mat-list-item *ngFor="let grocery of groceries">
+            <span style="font-weight: bold;"
+                >{{ grocery.id }}. {{ grocery.item }}</span>
+        </mat-list-item>
+    </mat-list>
 </mat-card>
