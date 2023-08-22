@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { GroceryListComponent } from './components/grocery-list/grocery-list.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { GroceryListComponent } from './components/grocery-list/grocery-list.com
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MatButtonModule,
     MatCardModule,
     MatIconModule,
