@@ -15,7 +15,7 @@ export class GroceryListCrudService {
   constructor(private http: HttpClient) { }
 
   fetchAll(): Observable<Grocery[]> {
-    return this.http.get(this.url, { responseType: "json" }).pipe(
+    return this.http.get<Grocery[]>(this.url, { responseType: "json" }).pipe(
       tap(() => console.log('fetched groceries'))
     );
   }
