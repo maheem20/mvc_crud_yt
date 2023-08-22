@@ -7,6 +7,7 @@ import { Grocery } from '../models/Grocery';
   providedIn: 'root'
 })
 export class GroceryListCrudService {
+  private url = 'http://localhost:3000/groceries';
 
   constructor(private http: HttpClient) { }
 }
