@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Grocery } from 'src/app/models/Grocery';
 
 import { GroceryListCrudService } from 'src/app/services/grocery-list-crud.service';
 
@@ -8,10 +11,7 @@ import { GroceryListCrudService } from 'src/app/services/grocery-list-crud.servi
   styleUrls: ['./grocery-list.component.scss']
 })
 export class GroceryListComponent {
-  groceries = [
-    { id: 1, name: 'Bread' },
-    { id: 2, name: 'Milk' },
-  ];
+  groceries$: Observable<Grocery[]> | undefined
 
   constructor(private groceryListCrudService: GroceryListCrudService) { }
 
