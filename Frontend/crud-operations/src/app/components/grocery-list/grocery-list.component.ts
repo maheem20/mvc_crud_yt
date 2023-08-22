@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GroceryListCrudService } from 'src/app/services/grocery-list-crud.service';
+
 @Component({
   selector: 'app-grocery-list',
   templateUrl: './grocery-list.component.html',
@@ -11,7 +13,7 @@ export class GroceryListComponent {
     { id: 2, name: 'Milk' },
   ];
 
-  constructor() { }
+  constructor(private groceryListCrudService: GroceryListCrudService) { }
 
   ngOnInit(): void { }
 }
