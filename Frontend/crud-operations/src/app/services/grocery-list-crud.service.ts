@@ -13,5 +13,7 @@ export class GroceryListCrudService {
 
   constructor(private http: HttpClient) { }
 
-  fetchAll(): Observable<Grocery[]> { }
+  fetchAll(): Observable<Grocery[]> {
+    return this.http.get(this.url, { responseType: "json" })
+  }
 }
