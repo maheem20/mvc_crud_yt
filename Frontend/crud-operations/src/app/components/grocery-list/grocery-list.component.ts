@@ -10,7 +10,7 @@ import { GroceryListCrudService } from 'src/app/services/grocery-list-crud.servi
   templateUrl: './grocery-list.component.html',
   styleUrls: ['./grocery-list.component.scss']
 })
-export class GroceryListComponent {
+export class GroceryListComponent implements OnInit {
   groceries$: Observable<Grocery[]> | undefined
 
   constructor(private groceryListCrudService: GroceryListCrudService) { }
