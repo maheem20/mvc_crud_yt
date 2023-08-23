@@ -1,4 +1,4 @@
 export interface Grocery {
     id: number;
-    name: string;
+    item: string;
 }
