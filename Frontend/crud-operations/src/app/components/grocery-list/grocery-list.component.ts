@@ -20,6 +20,6 @@ export class GroceryListComponent implements OnInit {
   }
 
   post(groceryItem: Partial<Grocery>): void {
-    console.log(groceryItem);
+    const item = (<string>groceryItem.item).trim();
   }
 }
