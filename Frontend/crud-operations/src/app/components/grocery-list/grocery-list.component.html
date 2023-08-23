@@ -10,7 +10,7 @@
     Shopping list
 </h1>
 <mat-card style="margin: 50px auto;">
-    <button mat-fab color="primary" style="float: right;">
+    <button (click)="post(groceryInput.value)" mat-fab color="primary" style="float: right;">
         <mat-icon>add</mat-icon>
     </button>
     <mat-form-field style="width: 100%;">
