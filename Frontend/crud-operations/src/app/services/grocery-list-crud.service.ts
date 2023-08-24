@@ -28,4 +28,7 @@ export class GroceryListCrudService {
       catchError(this.errorHandlerService.handleError<Grocery[]>('fetchAll', []))
     );
   }
+
+  post(item: Partial<Grocery>): Observable<any> {
+  }
 }
