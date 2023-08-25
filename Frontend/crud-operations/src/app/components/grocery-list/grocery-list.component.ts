@@ -27,6 +27,7 @@ export class GroceryListComponent implements OnInit {
     const item = (<string>groceryItem.item).trim();
     if (!item) return;
 
-    this.groceries$ = this.groceryListCrudService.post({ item });
+    this.groceries$ = this.groceryListCrudService
+      .post({ item })
   }
 }
