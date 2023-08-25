@@ -34,4 +34,10 @@ export class GroceryListCrudService {
       post<Partial<Grocery>>(this.url, item, this.httpOptions)
       .pipe(catchError(this.errorHandlerService.handleError<any>("post")));
   }
+
+  update(grocery: Grocery): Observable<any> {
+    return this.http
+      .put(this.url, grocery, this.httpOptions)
+      .pipe(catchError(this.errorHandlerService.handleError<any>("update")));
+  }
 }
