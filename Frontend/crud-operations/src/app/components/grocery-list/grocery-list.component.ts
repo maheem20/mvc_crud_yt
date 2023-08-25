@@ -16,7 +16,11 @@ export class GroceryListComponent implements OnInit {
   constructor(private groceryListCrudService: GroceryListCrudService) { }
 
   ngOnInit(): void {
-    this.groceries$ = this.groceryListCrudService.fetchAll();
+    this.groceries$ = this.fetchAll();
+  }
+
+  fetchAll(): Observable<Grocery[]> {
+    return this.groceryListCrudService.fetchAll();
   }
 
   post(groceryItem: Partial<Grocery>): void {
