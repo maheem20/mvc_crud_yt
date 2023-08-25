@@ -29,5 +29,6 @@ export class GroceryListComponent implements OnInit {
 
     this.groceries$ = this.groceryListCrudService
       .post({ item })
+      .pipe(tap((_) => (this.groceries$ = this.fetchAll())));
   }
 }
