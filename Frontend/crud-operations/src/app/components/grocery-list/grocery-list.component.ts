@@ -40,5 +40,8 @@ export class GroceryListComponent implements OnInit {
       id,
       item,
     }
+
+    this.groceries$ = this.groceryListCrudService
+      .update(newGrocery);
   }
 }
