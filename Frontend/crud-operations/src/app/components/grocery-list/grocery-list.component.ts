@@ -31,4 +31,7 @@ export class GroceryListComponent implements OnInit {
       .post({ item })
       .pipe(tap(() => (this.groceries$ = this.fetchAll())));
   }
+
+  update(id: number, newItem: Partial<Grocery>): void {
+  }
 }
