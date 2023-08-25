@@ -33,5 +33,6 @@ export class GroceryListComponent implements OnInit {
   }
 
   update(id: number, newItem: Partial<Grocery>): void {
+    const item = (<string>newItem).trim();
   }
 }
