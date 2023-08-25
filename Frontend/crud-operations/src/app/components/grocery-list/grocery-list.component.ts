@@ -42,6 +42,7 @@ export class GroceryListComponent implements OnInit {
     }
 
     this.groceries$ = this.groceryListCrudService
-      .update(newGrocery);
+      .update(newGrocery)
+      .pipe(tap(() => (this.groceries$ = this.fetchAll())));
   }
 }
