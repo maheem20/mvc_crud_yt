@@ -37,7 +37,7 @@ export class GroceryListCrudService {
 
   update(grocery: Grocery): Observable<any> {
     return this.http
-      .put(this.url, grocery, this.httpOptions)
+      .put<Grocery>(this.url, grocery, this.httpOptions)
       .pipe(catchError(this.errorHandlerService.handleError<any>("update")));
   }
 }
