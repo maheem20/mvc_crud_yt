@@ -24,7 +24,9 @@
                 >{{ grocery.id }}. {{ grocery.item }}</span>
                 <span style="position: absolute; right: 0;">
                     <button mat-icon-button>
-                        <mat-icon color="primary">
+                        <mat-icon
+                            (click)="update(grocery.id, { item: groceryInput.value })"
+                            color="primary">
                             edit
                         </mat-icon>
                     </button>
