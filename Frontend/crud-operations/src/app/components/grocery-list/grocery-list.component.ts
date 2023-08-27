@@ -48,6 +48,7 @@ export class GroceryListComponent implements OnInit {
 
   delete(id: number): void {
     this.groceries$ = this.groceryListCrudService
-      .delete(id);
+      .delete(id)
+      .pipe(tap(() => (this.groceries$ = this.fetchAll())));
   }
 }
