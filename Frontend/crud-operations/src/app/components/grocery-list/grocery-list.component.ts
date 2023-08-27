@@ -45,4 +45,8 @@ export class GroceryListComponent implements OnInit {
       .update(newGrocery)
       .pipe(tap(() => (this.groceries$ = this.fetchAll())));
   }
+
+  delete(id: number): void {
+
+  }
 }
