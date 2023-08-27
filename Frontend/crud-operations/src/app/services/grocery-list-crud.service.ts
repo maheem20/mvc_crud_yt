@@ -40,4 +40,7 @@ export class GroceryListCrudService {
       .put<Grocery>(this.url, grocery, this.httpOptions)
       .pipe(catchError(this.errorHandlerService.handleError<any>("update")));
   }
+
+  delete(id: number): Observable<any> {
+  }
 }
